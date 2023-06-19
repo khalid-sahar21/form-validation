@@ -1,0 +1,77 @@
+<html>
+    <title>my web page </title>
+    <head>
+        <style>
+            body{ background-color: aquamarine;}
+            h1{font: 200; color: blue;}
+            
+        </style>
+        <script>
+            
+            function validate()
+            {
+
+                var instr=document.myform.tdata.value;
+                const patrn=/\d{5}-\d{7}-\d{1}/;
+                if (patrn.test(instr))
+                {
+                    alert("valid Data");
+                }
+                else
+                {
+                    alert("invalid Data")
+                }
+            }
+    function Email()
+    {
+
+            var stre=document.myform.Edata.value;
+                const patrn=/\w+@\w+.\w{3}/;
+                if (patrn.test(stre))
+                {
+                    alert("valid Data");
+                }
+                else
+                {
+                    alert("invalid Data")
+                }
+            }
+            function reg()
+            {
+                var strr=document.myform.Rdata.value;
+                const patrn=/su-\d{2}-\d{2}-\d{3}-\d{3}/;
+                if (patrn.test(strr))
+                {
+                    alert("valid Data");
+                }
+                else
+                {
+                    alert("invalid Data")
+                }
+            }
+        
+              
+            
+        </script>
+    </head>
+    <body>
+        <h1> Wellcome to My website khalid sahar web page </h1>
+        
+
+
+        <form name="myform">
+
+
+            <input type="text" name="tdata"><br><br>
+            <button onclick="validate()">CNIC  </button> <br><br>
+
+            <input type="text" name="Edata"><br><br>
+            <button onclick="Email()">Email</button> <br><br>
+
+            <input type="text" name="Rdata"><br><br>
+            <button onclick="reg()">Reg no </button> <br><br>
+
+
+        </form>
+    </body>
+</html>
